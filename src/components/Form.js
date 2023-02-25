@@ -9,7 +9,9 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.addTask(name);
+    if (name == "") {
+      alert("provide item name");
+    } else props.addTask(name);
     setName("");
   }
 
